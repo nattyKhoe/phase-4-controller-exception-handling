@@ -61,4 +61,8 @@ class BirdsController < ApplicationController
     params.permit(:name, :species, :likes)
   end
 
+  def find_bird
+    Bird.find_by(id: params[:id])
+  end
+  
 end
